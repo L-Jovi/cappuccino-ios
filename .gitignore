@@ -36,3 +36,12 @@ Session.vim
 # tmux
 #
 tmux*.log
+
+# Carthage
+#
+Carthage/Build
+
+# project/RN-iOS-integration
+#
+reactnative/node_modules/
+reactnative/npm-debug.log
