@@ -4,16 +4,18 @@
 
 ### 已整理的指南
 
+以下索引项前后拥有依赖关系，靠后的内容会假设你已经熟悉了之前的相关信息。
+
 - [需求和依赖](./docs/dependency.md)
+- [使用 CodePush CLI](./docs/usage-cli.md)
 - [使用 CodePush SDK](./docs/usage-sdk.md)
 - [使用 react-native-code-push](./docs/usage-js.md)
-- [使用 CodePush CLI](./docs/usage-cli.md)
+- [私有服务定制](./docs/private-server.md)
 
 ### 尚未整理的内容
 
-以下内容受限于本人时间，尚未整理为可以阅读的文档，不过在之前的项目中皆有应用，这里先提供官方链接。
+以下内容尚未整理为可以阅读的文档，这里先提供官方链接。
 
-- [私有云定制 - lisong/code-push-server](https://github.com/lisong/code-push-server)
 - [多环境测试 - #multi-deployment-testing](https://github.com/Microsoft/react-native-code-push#multi-deployment-testing)
 
 ## 问题

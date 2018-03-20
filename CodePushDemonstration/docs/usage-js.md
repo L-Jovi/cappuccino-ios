@@ -1,5 +1,17 @@
 # 使用 react-native-code-push
 
+## 依赖安装
+
+如果项目结构是标准的 RN 以 JS 为入口进行集成，那么请参考推荐的 `react-native link` 方法，具体参考 [使用 CodePush SDK](./usage-sdk.md) 中 __集成安装__ 小节。
+
+如果项目结构为分离的 Native 项目集成 RN 部分界面的结构，请分别在不同的项目中集成 CodePush SDK。
+
+其中 Native 端建议使用 CocoaPods，具体参考官方文档 [#plugin-installation-ios---cocoapods](https://github.com/Microsoft/react-native-code-push/blob/master/docs/setup-ios.md#plugin-installation-ios---cocoapods)，RN 端依赖安装方式不变，依然为 `npm i --save react-native-code-push`。
+
+## 使用
+
+以下接口使用信息可以参考演示项目 [CodePushDemonstration](https://github.com/L-Jovi/exer-ios/tree/master/CodePushDemonstration)
+
 鉴于业务需求和热更新的交互方式很大层面取决于业务，所以该模块封装的 `updateDialog` 更新交互并没有实用性，而且也无法定制（关于为何无法定制可以参考 [issues/402](https://github.com/Microsoft/react-native-code-push/issues/402)），因此只需要熟悉核心的 API `sync` 相关功能即可。
 
 可以参考该接口的官方文档 [#codepushsync](https://github.com/Microsoft/react-native-code-push/blob/master/docs/api-js.md#codepushsync)

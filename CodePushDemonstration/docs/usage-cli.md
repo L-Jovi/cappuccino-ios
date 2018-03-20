@@ -25,7 +25,7 @@ code-push app add Demo-Android android react-native
 
 注意返回的 Deployment Key，这里以我本地测试为示例。
 
-![code-push-add-app](./images/code-push-add-app.png.png)
+![code-push-add-app](./images/code-push-add-app.png)
 
 ## 本地打包测试（debug 模式）
 

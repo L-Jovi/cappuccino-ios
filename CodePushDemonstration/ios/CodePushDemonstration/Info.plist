@@ -23,7 +23,9 @@
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>CodePushDeploymentKey</key>
-	<string>Zj_K0--49ydu5b1Wy66t5ZFJLYDLfc3dd93c-da61-4c62-a10a-3816245dc777</string>
+	<string>ridyazxRiMN2GLRXqFLSjBnGqJ8o4ksvOXqog</string>
+	<key>CodePushServerURL</key>
+	<string>http://localhost:3000</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>

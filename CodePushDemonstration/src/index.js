@@ -54,11 +54,11 @@ export default class App extends React.Component {
           <Image
             style={styles.image}
             resizeMode={Image.resizeMode.contain}
-            source={require("./images/steam-app.png")}
-            // source={require("./images/steam-logo.png")}
+            // source={require("./images/steam-app.png")}
+            source={require("./images/steam-logo.png")}
           />
 
-          <Text style={styles.textShow}>更新内容 v15</Text>
+          <Text style={styles.textShow}>更新内容 v16</Text>
         </View>
 
         <View style={styles.containerControl}>

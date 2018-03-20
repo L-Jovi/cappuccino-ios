@@ -1,22 +1,4 @@
-# 组织依赖
-
-## 构建依赖
-
-[react-community/create-react-native-app](https://github.com/react-community/create-react-native-app)
-
-[code-push/docs](https://microsoft.github.io/code-push/docs/getting-started.html	)
-
-[Microsoft/react-native-code-push](https://github.com/Microsoft/react-native-code-push)
-
-[lisong/code-push-server](https://github.com/lisong/code-push-server)
-
-## 版本信息
-
-```
-"react": "16.2.0"
-"react-native": "0.52.0"
-"react-native-code-push": "^5.2.2"
-```
+# 需求和依赖
 
 ## 需求
 
@@ -39,3 +21,25 @@ iOS 平台应用版本快速迭代，应用内热更新绕过冗长的审核期�
 另提供 [React Native 详细源码导读](https://github.com/guoxiaoxing/react-native/blob/master/doc/ReactNative%E6%BA%90%E7%A0%81%E7%AF%87/1ReactNative%E6%BA%90%E7%A0%81%E7%AF%87%EF%BC%9A%E6%BA%90%E7%A0%81%E5%88%9D%E8%AF%86.md) 。
 
 以下仅针对应用热修复示例进行引导，不再涉及任何原理内容。
+
+
+## 构建依赖
+
+[react-community/create-react-native-app](https://github.com/react-community/create-react-native-app)
+
+[code-push/docs](https://microsoft.github.io/code-push/docs/getting-started.html	)
+
+[Microsoft/react-native-code-push](https://github.com/Microsoft/react-native-code-push)
+
+[lisong/code-push-server](https://github.com/lisong/code-push-server)
+
+## 版本信息
+
+以下版本信息指演示 demo 的版本信息，项目地址对应在 [CodePushDemonstration](https://github.com/L-Jovi/exer-ios/tree/master/CodePushDemonstration)
+
+```
+"react": "16.2.0"
+"react-native": "0.52.0"
+"react-native-code-push": "^5.2.2"
+```
+
