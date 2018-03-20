@@ -34,7 +34,7 @@ $ ./bin/www #启动服务 浏览器中打开 http://127.0.0.1:3000
 
 ### CodePushCli 配置切换
 
-CodePushCli 使用 Session 文件管理单次会话信息，该文件在运行 `code-push login` 后会记录在 `~/.code-push.config` 内，在 `code-push logout` 后擦除。
+CodePushCli 使用 Session 文件记忆会话信息，该文件在运行 `code-push login` 后会记录在 `~/.code-push.config` 内，在 `code-push logout` 后擦除。
 
 需要注意的是，CodePushCli 一次只能保持与一台指定服务间的通讯连接，若要从公有云切换到私有服务，需要在登出后重新登入我方搭建私服的服务器地址。
 
