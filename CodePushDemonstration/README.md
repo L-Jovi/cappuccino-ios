@@ -1,8 +1,6 @@
-# 应用内热修复演示（iOS）
+# 应用内热修复（iOS）
 
 ## 索引
-
-### 已整理的指南
 
 以下索引项前后拥有依赖关系，靠后的内容会假设你已经熟悉了之前的相关信息。
 
@@ -11,12 +9,7 @@
 - [使用 CodePush SDK](./docs/usage-sdk.md)
 - [使用 react-native-code-push](./docs/usage-js.md)
 - [私有服务定制](./docs/private-server.md)
-
-### 尚未整理的内容
-
-以下内容尚未整理为可以阅读的文档，这里先提供官方链接。
-
-- [多环境测试 - #multi-deployment-testing](https://github.com/Microsoft/react-native-code-push#multi-deployment-testing)
+- [多环境测试](./docs/multi-deployment-testing.md)
 
 ## 问题
 

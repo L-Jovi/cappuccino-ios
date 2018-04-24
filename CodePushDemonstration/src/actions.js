@@ -65,6 +65,8 @@ export const actions = {
     syncImmediate() {
       codePush.sync(
         {
+          // deploymentKey: 'gi4DNGxLQLkZscKMDvNT8toxS51H4ksvOXqog',
+          deploymentKey: 'ridyazxRiMN2GLRXqFLSjBnGqJ8o4ksvOXqog',
           installMode: codePush.InstallMode.IMMEDIATE,
           updateDialog: true
         },
