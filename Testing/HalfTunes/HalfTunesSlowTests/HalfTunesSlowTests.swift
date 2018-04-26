@@ -52,7 +52,7 @@ class HalfTunesSlowTests: XCTestCase {
     // Asynchronous test: faster fail
     func testCallToiTunesCompletes() {
         // given
-        let url = URL(string: "https://itunes.apple.com/search?media=music&entity=song&term=abba")
+        let url = URL(string: "https://itune.apple.com/search?media=music&entity=song&term=abba")
         // 1
         let promise = expectation(description: "Completion handler invoked")
         var statusCode: Int?
