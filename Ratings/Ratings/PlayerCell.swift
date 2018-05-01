@@ -19,7 +19,6 @@ class PlayerCell: UITableViewCell {
     var player: Player? {
         didSet {
             guard let player = player else { return }
-            
             gameLabel.text = player.game
             nameLabel.text = player.name
             ratingImageView.image = image(forRating: player.rating)

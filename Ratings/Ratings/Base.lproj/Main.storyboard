@@ -33,7 +33,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CuJ-jh-Ern" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="368.80000000000001" y="446.62668665667172"/>
+            <point key="canvasLocation" x="366" y="547"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="JcB-tW-HB6">
@@ -45,7 +45,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="sVS-SL-kPC" kind="relationship" relationship="viewControllers" id="EBC-o5-HSt"/>
+                        <segue destination="cGt-AO-3b3" kind="relationship" relationship="viewControllers" id="EBC-o5-HSt"/>
                         <segue destination="FsL-Pa-olB" kind="relationship" relationship="viewControllers" id="Pq3-vH-qE8"/>
                     </connections>
                 </tabBarController>
@@ -54,105 +54,17 @@
             <point key="canvasLocation" x="-583" y="115"/>
         </scene>
         <!--Players-->
-        <scene sceneID="CNB-Q4-9Le">
+        <scene sceneID="Ob8-D0-Gds">
             <objects>
-                <tableViewController id="ur0-jc-ny9" customClass="PlayersViewController" customModule="Ratings" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zPg-1u-bf9">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PlayerCell" rowHeight="60" id="1P7-7b-Jhq" customClass="PlayerCell" customModule="Ratings" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="320" height="60"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1P7-7b-Jhq" id="Smj-sc-G09">
-                                    <rect key="frame" x="0.0" y="0.0" width="286" height="59.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2Kf-f2-iZP">
-                                            <rect key="frame" x="20" y="0.0" width="246" height="60"/>
-                                            <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Jf4-RS-KDw">
-                                                    <rect key="frame" x="0.0" y="10" width="146" height="40"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uLX-ml-ked">
-                                                            <rect key="frame" x="0.0" y="0.0" width="146" height="20"/>
-                                                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Game" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b94-AG-udQ">
-                                                            <rect key="frame" x="0.0" y="20" width="146" height="20"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="uLX-ml-ked" secondAttribute="bottom" constant="20" symbolic="YES" id="0P2-gU-sdG"/>
-                                                    </constraints>
-                                                </stackView>
-                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pQd-fl-wic">
-                                                    <rect key="frame" x="165" y="5" width="81" height="50"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="81" id="RpS-ln-jMD"/>
-                                                    </constraints>
-                                                </imageView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="pQd-fl-wic" firstAttribute="top" secondItem="2Kf-f2-iZP" secondAttribute="top" constant="5" id="CrG-DW-kJj"/>
-                                                <constraint firstAttribute="trailing" secondItem="Jf4-RS-KDw" secondAttribute="trailing" constant="100" id="YZj-UR-NC6"/>
-                                                <constraint firstItem="Jf4-RS-KDw" firstAttribute="top" secondItem="2Kf-f2-iZP" secondAttribute="top" constant="10" id="c5Z-7c-Qsp"/>
-                                            </constraints>
-                                        </stackView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="2Kf-f2-iZP" firstAttribute="leading" secondItem="Smj-sc-G09" secondAttribute="leading" constant="20" id="Lak-X9-U6Q"/>
-                                        <constraint firstAttribute="bottom" secondItem="2Kf-f2-iZP" secondAttribute="bottom" id="VFI-Bz-Nsh"/>
-                                        <constraint firstItem="2Kf-f2-iZP" firstAttribute="top" secondItem="Smj-sc-G09" secondAttribute="top" id="ek1-CF-p7R"/>
-                                        <constraint firstAttribute="trailing" secondItem="2Kf-f2-iZP" secondAttribute="trailing" constant="20" id="hhl-wg-q83"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="gameLabel" destination="b94-AG-udQ" id="vIa-Rf-90q"/>
-                                    <outlet property="nameLabel" destination="uLX-ml-ked" id="Z3M-CY-bmt"/>
-                                    <outlet property="ratingImageView" destination="pQd-fl-wic" id="unB-4j-eGg"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="ur0-jc-ny9" id="C0S-El-xYd"/>
-                            <outlet property="delegate" destination="ur0-jc-ny9" id="QBC-HS-fks"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Players" id="g4g-CR-NFy"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IQR-Au-Hjc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1305" y="-228.16901408450704"/>
-        </scene>
-        <!--Players-->
-        <scene sceneID="eND-ba-Yqw">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sVS-SL-kPC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Players" image="Players" id="soC-WY-E7h"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="y5E-xE-OU9">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="ur0-jc-ny9" kind="relationship" relationship="rootViewController" id="cqc-pV-0v0"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xxF-S9-OMJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Players" id="cGt-AO-3b3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="OQe-wF-vof"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OUA-p2-s2h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="367.19999999999999" y="-228.03598200899552"/>
         </scene>
     </scenes>
     <resources>
         <image name="Gestures" width="30" height="30"/>
-        <image name="Players" width="30" height="30"/>
     </resources>
 </document>

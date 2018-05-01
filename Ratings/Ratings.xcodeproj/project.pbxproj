@@ -18,6 +18,9 @@
 		987EA78720936B4700ABCD78 /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987EA78620936B4700ABCD78 /* PlayersViewController.swift */; };
 		987EA78920936F2E00ABCD78 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987EA78820936F2E00ABCD78 /* Player.swift */; };
 		987EA78B20936F9600ABCD78 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987EA78A20936F9600ABCD78 /* SampleData.swift */; };
+		98F5A3A620984B8600271AA8 /* PlayerDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F5A3A520984B8600271AA8 /* PlayerDetailsViewController.swift */; };
+		98F5A3A82098645C00271AA8 /* GamePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F5A3A72098645C00271AA8 /* GamePickerViewController.swift */; };
+		98F5A3AB20986BA100271AA8 /* Players.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98F5A3A920986BA100271AA8 /* Players.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		987EA78620936B4700ABCD78 /* PlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
 		987EA78820936F2E00ABCD78 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		987EA78A20936F9600ABCD78 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		98F5A3A520984B8600271AA8 /* PlayerDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailsViewController.swift; sourceTree = "<group>"; };
+		98F5A3A72098645C00271AA8 /* GamePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePickerViewController.swift; sourceTree = "<group>"; };
+		98F5A3AA20986BA100271AA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Ratings/Base.lproj/Players.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,7 @@
 		9873A2C120922C02007633C8 = {
 			isa = PBXGroup;
 			children = (
+				98F5A3A920986BA100271AA8 /* Players.storyboard */,
 				9873A2CC20922C02007633C8 /* Ratings */,
 				9873A2E120922C04007633C8 /* RatingsTests */,
 				9873A2EC20922C04007633C8 /* RatingsUITests */,
@@ -109,6 +116,8 @@
 				9873A2CF20922C02007633C8 /* ViewController.swift */,
 				987EA78620936B4700ABCD78 /* PlayersViewController.swift */,
 				9872CEA520937A4500278B8F /* PlayerCell.swift */,
+				98F5A3A520984B8600271AA8 /* PlayerDetailsViewController.swift */,
+				98F5A3A72098645C00271AA8 /* GamePickerViewController.swift */,
 				987EA78820936F2E00ABCD78 /* Player.swift */,
 				987EA78A20936F9600ABCD78 /* SampleData.swift */,
 				9873A2D120922C02007633C8 /* Main.storyboard */,
@@ -242,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9873A2D820922C03007633C8 /* LaunchScreen.storyboard in Resources */,
+				98F5A3AB20986BA100271AA8 /* Players.storyboard in Resources */,
 				9873A2D520922C03007633C8 /* Assets.xcassets in Resources */,
 				9873A2D320922C02007633C8 /* Main.storyboard in Resources */,
 			);
@@ -268,9 +278,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98F5A3A82098645C00271AA8 /* GamePickerViewController.swift in Sources */,
 				9872CEA620937A4500278B8F /* PlayerCell.swift in Sources */,
 				987EA78920936F2E00ABCD78 /* Player.swift in Sources */,
 				9873A2D020922C02007633C8 /* ViewController.swift in Sources */,
+				98F5A3A620984B8600271AA8 /* PlayerDetailsViewController.swift in Sources */,
 				987EA78720936B4700ABCD78 /* PlayersViewController.swift in Sources */,
 				987EA78B20936F9600ABCD78 /* SampleData.swift in Sources */,
 				9873A2CE20922C02007633C8 /* AppDelegate.swift in Sources */,
@@ -323,6 +335,14 @@
 				9873A2D720922C03007633C8 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		98F5A3A920986BA100271AA8 /* Players.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				98F5A3AA20986BA100271AA8 /* Base */,
+			);
+			name = Players.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
