@@ -2,19 +2,21 @@
   "name": "ReactNativePractice",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "react-native start",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "test": "jest",
+    "haul": "haul",
+    "op-ios": "haul start --platform ios --dev false --minify true --port 8081",
+    "op-and": "haul start --platform android --dev false --minify true --port 8081"
+  },
   "devDependencies": {
     "babel-preset-react-native-stage-0": "^1.0.1",
     "haul": "^1.0.0-rc.1",
     "jest": "^23.1.0",
     "jest-react-native": "^18.0.0",
     "react-test-renderer": "16.3.1"
-  },
-  "scripts": {
-    "start": "react-native start",
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
-    "test": "jest",
-    "haul": "haul"
   },
   "jest": {
     "preset": "react-native"
