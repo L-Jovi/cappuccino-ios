@@ -9,26 +9,33 @@ module.exports = (options, defaults) => {
     root,
   } = options
 
-  return {
-    entry: `./index.${platform}.js`,
+  if (dev === true) {
+    return {
+      entry: `./index.${platform}.js`,
+    }
 
-    output: {
-      filename: 'main.jsbundle',
-      path: path.resolve(__dirname, 'dist')
-    },
+  } else {
+    return {
+      entry: `./index.${platform}.js`,
 
-    // module: {
-    //   ...defaults.module,
-    //   rules: [
-    //     ...defaults.module.rules,
-    //   ],
-    // },
+      output: {
+        filename: `main.jsbundle`,
+        path: path.resolve(__dirname, 'dist')
+      },
 
-    // resolve: {
-    //   ...defaults.resolve,
-    //   plugins: [...defaults.resolve.plugins],
-    //   modules: ['src', 'node_modules'],
-    //   extensions: ['.js', '.jsx', '.json'],
-    // },
+      // module: {
+      //   ...defaults.module,
+      //   rules: [
+      //     ...defaults.module.rules,
+      //   ],
+      // },
+
+      // resolve: {
+      //   ...defaults.resolve,
+      //   plugins: [...defaults.resolve.plugins],
+      //   modules: ['src', 'node_modules'],
+      //   extensions: ['.js', '.jsx', '.json'],
+      // },
+    }
   }
 }

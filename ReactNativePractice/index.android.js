@@ -12,8 +12,8 @@ import App from './src/App'
 AppRegistry.registerComponent('ReactNativePractice', makeHot(() => App))
 
 if (module.hot) {
-  module.hot.accept(['./App'], () => {
-    clearCacheFor(require.resolve('./App'));
-    redraw(() => require('./App').default);
+  module.hot.accept(['./src/App'], () => {
+    clearCacheFor(require.resolve('./src/App'));
+    redraw(() => require('./src/App').default);
   })
 }
