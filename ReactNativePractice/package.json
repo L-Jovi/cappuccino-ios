@@ -3,13 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "react-native start",
+    "start": "haul",
+    "start-ios": "haul start --platform ios --dev false --minify true --port 8081",
+    "start-and": "haul start --platform android --dev false --minify true --port 8081",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "test": "jest",
-    "haul": "haul",
-    "op-ios": "haul start --platform ios --dev false --minify true --port 8081",
-    "op-and": "haul start --platform android --dev false --minify true --port 8081"
+    "build-ios": "haul bundle --platform ios --config webpack.haul.js --assets-dest dist --dev false"
   },
   "devDependencies": {
     "babel-preset-react-native-stage-0": "^1.0.1",
