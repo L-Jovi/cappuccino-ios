@@ -2,43 +2,32 @@ import path from 'path'
 import { createWebpackConfig } from 'haul'
 
 export default {
-  webpack: createWebpackConfig((options) => {
-    const {
-      platform,
-      dev,
-      minify,
-      bundle,
-      root,
-    } = options
+  webpack: env => {
+    const config = createWebpackConfig((options) => {
+      const {
+        platform,
+        dev,
+        minify,
+        bundle,
+        root,
+      } = options
 
-    const baseConfig = {
-      entry: `./index.${platform}.js`,
-
-      module: {
-        rules: [
-        ],
-      },
-
-      resolve: {
-        alias: {
-        },
-      }
-    }
-
-    if (dev === true) {
       return {
-        ...baseConfig,
+        entry: `./index.${platform}.js`,
       }
+    })(env)
+
+    config.resolve.alias['~modules'] = path.resolve(__dirname, 'src', 'modules')
+
+    if (env.dev === true) {
 
     } else {
-      return {
-        ...baseConfig,
-
-        output: {
-          filename: `main.jsbundle`,
-          path: path.resolve(__dirname, 'dist')
-        },
+      config.output = {
+        filename: `main.jsbundle`,
+        path: path.resolve(__dirname, 'dist')
       }
     }
-  })
+
+    return config
+  }
 }
