@@ -17,6 +17,7 @@ export default {
       }
     })(env)
 
+    config.resolve.alias['~services'] = path.resolve(__dirname, 'src', 'services')
     config.resolve.alias['~modules'] = path.resolve(__dirname, 'src', 'modules')
 
     if (env.dev === true) {

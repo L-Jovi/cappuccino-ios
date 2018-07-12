@@ -5,7 +5,7 @@
   "scripts": {
     "start": "haul start --config haul.config.js",
     "android": "react-native run-android",
-    "ios": "react-native run-ios",
+    "ios": "react-native run-ios --simulator='iPhone SE'",
     "test": "jest",
     "build-ios": "haul bundle --platform ios --config haul.config.js --assets-dest dist --dev false"
   },

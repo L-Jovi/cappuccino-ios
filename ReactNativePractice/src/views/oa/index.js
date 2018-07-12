@@ -5,15 +5,14 @@ import { StyleSheet, Text, View, TouchableOpacity, } from 'react-native'
 
 import { actionsPure, actionsSideEffect, } from '~modules'
 
-const { oa: actsMixed, } = actionsSideEffect
-
 const styles = StyleSheet.create(require('./styles').default)
 
 
 class OA extends React.Component {
   constructor(props) {
     super(props)
-    this.actions = actionsSideEffect.utils.bindActions(this, actsMixed)
+    this.actions = actionsSideEffect.utils.bindActions(
+      this, actionsSideEffect.oa)
   }
 
   componentWillMount() {

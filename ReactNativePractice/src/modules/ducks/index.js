@@ -1,20 +1,25 @@
 import { combineReducers } from 'redux-immutable'
 
-import createOa from './oa'
+import utils from './utils'
 
-// TODO transfer to autobuild
 const createDucks = (types) => {
-  const { actionsOa, reducerOa } = createOa(types)
+  // TODO consider [require.context] implements
+  const oa = require('./oa').default(types)
+
+  const actionsSideEffect = {
+    utils,
+    oa: oa.actionsSideEffect,
+  }
 
   const actionsPure = {
-    ...actionsOa,
+    ...oa.actionsPure,
   }
 
   const reducerRoot = combineReducers({
-    oa: reducerOa,
+    oa: oa.reducer,
   })
 
-  return { actionsPure, reducerRoot, }
+  return { actionsSideEffect, actionsPure, reducerRoot, }
 }
 
 export default createDucks

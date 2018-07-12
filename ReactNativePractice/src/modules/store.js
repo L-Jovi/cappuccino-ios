@@ -20,7 +20,9 @@ const createStoreWithMiddleware = (rootReducer) => {
     middlewareSaga,
   ]
 
-  let enhancer = undefined
+  let enhancers = undefined
+  const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
+
   if (__DEV__ === true) {
     const middlewareLogger = createLogger({
       level: ({ error = false }) => error ? `error` : `log`,
@@ -35,20 +37,20 @@ const createStoreWithMiddleware = (rootReducer) => {
     })
 
     middlewares.push(middlewareLogger)
-    enhancer = compose(
+    enhancers = composeEnhancers(
       applyMiddleware(...middlewares),
       window.devToolsExtension ? window.devToolsExtension() : f => f
     )
 
   } else {
-    enhancer = compose(applyMiddleware(...middlewares))
+    enhancers = composeEnhancers(applyMiddleware(...middlewares))
   }
 
   return {
     createStore: () => {
-      return createStore(rootReducer, Map({}), enhancer)
+      return createStore(rootReducer, Map({}), enhancers)
     },
-    runSaga: middlewareSaga.run,
+    runSaga: (...args) => middlewareSaga.run(...args),
   }
 }
 

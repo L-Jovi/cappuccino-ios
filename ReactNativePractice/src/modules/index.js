@@ -1,10 +1,9 @@
 import * as types from './constants'
-import actionsSideEffect from './actions'
 import createDucks from './ducks'
-// import combineSagas from './sagas'
+import combineSagas from './sagas'
 import createStoreWithMiddleware from './store'
 
-const { reducerRoot, actionsPure, } = createDucks(types)
+const { actionsPure, actionsSideEffect, reducerRoot, } = createDucks(types)
 
 const getStore = () => {
   const {
@@ -13,7 +12,7 @@ const getStore = () => {
   } = createStoreWithMiddleware(reducerRoot)
 
   const store = createStore()
-  // runSaga(combineSagas(types))
+  runSaga(combineSagas(types))
 
   return store
 }

@@ -1,26 +1,32 @@
 import { Map, } from 'immutable'
-import { createActions, handleActions, } from 'redux-actions'
+import { createActions, handleActions, combineActions, } from 'redux-actions'
 
 const initialState = Map({
   isLoadPage: true,
 })
 
-const createOa = (types) => {
+export default (types) => {
   const {
     OA_IS_LOADING,
-  } = types;
+  } = types
 
-  const actionsOa = createActions({
-    [OA_IS_LOADING]: (isLoadPage) => ({ isLoadPage })
+  const actionsSideEffect = {
+    touchable: {
+      onPress() {
+        this.props.actions.isLoading(false)
+      }
+    }
+  }
+
+  const actionsPure = createActions({
+    [OA_IS_LOADING]: (isLoadPage) => ({ isLoadPage }),
   })
 
-  const reducerOa = handleActions({
-    [actionsOa.osIsLoading](state, { payload: { isLoadPage } }) {
-      return state.set('isLoadPage')
-    }
+  const reducer = handleActions({
+    [OA_IS_LOADING](state, { payload: { isLoadPage } }) {
+      return state.set('isLoadPage', isLoadPage)
+    },
   }, initialState)
 
-  return { actionsOa, reducerOa };
+  return { actionsSideEffect, actionsPure, reducer, }
 }
-
-export default createOa;
