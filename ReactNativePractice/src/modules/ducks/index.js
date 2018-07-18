@@ -6,20 +6,20 @@ const createDucks = (types) => {
   // TODO consider [require.context] implements
   const oa = require('./oa').default(types)
 
-  const actionsSideEffect = {
-    utils,
-    oa: oa.actionsSideEffect,
-  }
+  const reducerRoot = combineReducers({
+    oa: oa.reducer,
+  })
 
   const actionsPure = {
     ...oa.actionsPure,
   }
 
-  const reducerRoot = combineReducers({
-    oa: oa.reducer,
-  })
+  const actionsSideEffect = {
+    utils,
+    oa: oa.actionsSideEffect,
+  }
 
-  return { actionsSideEffect, actionsPure, reducerRoot, }
+  return { reducerRoot, actionsPure, actionsSideEffect,}
 }
 
 export default createDucks

@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const instance = axios.create({
-  timeout: 12000,
+  timeout: 5000,
 })
 
 instance.all = axios.all

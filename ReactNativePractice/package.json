@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "init": "yarn && react-native link",
     "start": "haul start --config haul.config.js",
-    "android": "react-native run-android",
-    "ios": "react-native run-ios --simulator='iPhone SE'",
-    "test": "jest",
-    "build-ios": "haul bundle --platform ios --config haul.config.js --assets-dest dist --dev false"
+    "build-ios": "react-native run-ios --simulator='iPhone SE'",
+    "build-android": "react-native run-android",
+    "pack-ios": "haul bundle --platform ios --config haul.config.js --assets-dest dist --dev false",
+    "test": "jest"
   },
   "devDependencies": {
     "babel-preset-react-native-stage-0": "^1.0.1",
@@ -19,6 +20,7 @@
     "redux-devtools": "^3.4.1"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "fbemitter": "^2.1.1",
     "immutable": "^3.8.2",
     "lodash": "^4.17.10",

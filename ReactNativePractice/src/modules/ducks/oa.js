@@ -10,6 +10,16 @@ export default (types) => {
     OA_IS_LOADING,
   } = types
 
+  const reducer = handleActions({
+    [OA_IS_LOADING](state, { payload: { isLoadPage } }) {
+      return state.set('isLoadPage', isLoadPage)
+    },
+  }, initialState)
+
+  const actionsPure = createActions({
+    [OA_IS_LOADING]: (isLoadPage) => ({ isLoadPage }),
+  })
+
   const actionsSideEffect = {
     touchable: {
       onPress() {
@@ -18,15 +28,5 @@ export default (types) => {
     }
   }
 
-  const actionsPure = createActions({
-    [OA_IS_LOADING]: (isLoadPage) => ({ isLoadPage }),
-  })
-
-  const reducer = handleActions({
-    [OA_IS_LOADING](state, { payload: { isLoadPage } }) {
-      return state.set('isLoadPage', isLoadPage)
-    },
-  }, initialState)
-
-  return { actionsSideEffect, actionsPure, reducer, }
+  return { reducer, actionsPure, actionsSideEffect, }
 }
