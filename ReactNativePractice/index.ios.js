@@ -8,13 +8,13 @@ import {
 } from 'haul/hot'
 import { AppRegistry } from 'react-native'
 
-import App from './src/App.test'
+import App from './src/App'
 
 AppRegistry.registerComponent('ReactNativePractice', makeHot(() => App))
 
 if (module.hot) {
-  module.hot.accept(['./src/App.test'], () => {
-    clearCacheFor(require.resolve('./src/App.test'))
-    redraw(() => require('./src/App.test').default)
+  module.hot.accept(['./src/App'], () => {
+    clearCacheFor(require.resolve('./src/App'))
+    redraw(() => require('./src/App').default)
   })
 }
