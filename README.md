@@ -6,12 +6,12 @@ Collection of iOS application exercise targets merge into one store.
 
 You could follow below index to check details of each project.
 
-- [CodePush Demonstration (zh)](./CodePushDemonstration/README.md)
+- [CodePush Demonstration (zh)](./CodePushDemonstration)
 
-- [JSPatch Demonstration](./HotfixClient/README.md)
+- [JSPatch Demonstration](./HotfixClient)
 
-- [Ratings App - Storyboard](./Ratings/README.md)
+- [Ratings App - Storyboard](./Ratings)
 
-- [Gallery Starter - Auto Layout](./Gallery-Starter/README.md)
+- [Gallery Starter - Auto Layout](./Gallery-Starter)
 
-- [FoodTracker - Starter Kit of Develop iOS Apps Swift](./FoodTracker/README.md)
+- [FoodTracker - Starter Kit of Develop iOS Apps Swift](./FoodTracker)
