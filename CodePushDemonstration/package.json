@@ -17,7 +17,7 @@
     "preset": "react-native"
   },
   "dependencies": {
-    "lodash": "^4.17.5",
+    "lodash": "^4.17.19",
     "react": "16.2.0",
     "react-native": "0.52.0",
     "react-native-code-push": "^5.2.2"
